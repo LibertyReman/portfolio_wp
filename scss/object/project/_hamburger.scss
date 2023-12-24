@@ -1,0 +1,64 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+@use "sass:math";
+
+$btn-width: 30px;
+$btn-height: 2px;
+
+
+.p-hamburger {
+  @include mixin.dbg-border(green, 3, 1);
+  width: 60px;
+  height: 50px;
+  position: relative;
+
+  &::before,
+  &::after { // 上下の線
+    display: block; // width, height指定できるように変更
+    position: absolute;
+    left: calc(50% - math.div($btn-width, 2));
+    width: $btn-width;
+    height: $btn-height;
+    background: variable.$color-ginnezumi;
+    content: ""; // before, after擬似要素で必須
+    transition: transform .5s;
+  }
+  &::before {
+    @include mixin.dbg-border(red, 1, 1);
+    top: calc(25% - math.div($btn-height, 2));
+  }
+  &::after {
+    @include mixin.dbg-border(blue, 1, 1);
+    top: calc(75% - math.div($btn-height, 2));
+  }
+
+  > span { // 真ん中の線
+    @include mixin.dbg-border(yellow, 1, 1);
+    position: absolute;
+    left: calc(50% - math.div($btn-width, 2));
+    top: calc(50% - math.div($btn-height, 2));
+    width: $btn-width;
+    height: $btn-height;
+    background: variable.$color-ginnezumi;
+    font-size: 0;
+    transition: transform .5s;
+  }
+
+  &.is-open {
+    &::before {
+      transform: rotate(45deg);
+      top: calc(50% - math.div($btn-height, 2));
+    }
+    &::after {
+      transform: rotate(-45deg);
+      top: calc(50% - math.div($btn-height, 2));
+    }
+    > span {
+      background: none;
+    }
+  }
+
+}
+
+
+

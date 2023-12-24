@@ -3,22 +3,35 @@
   <head>
     <meta chaarset="utf-8">
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liber's portfolio">
-    <title>Liber's portfolio</title>
+    <meta name="description" content="Liber's Portfolio">
+    <title>Liber's Portfolio</title>
     <link href="./css/ress.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-      <h1>My Portfolio</h1>
+    <header class="l-header"> <!-- flex -->
+      <div class="p-gmenu">
+        <button class="p-hamburger js-hamburger">
+          <span>menuボタン</span>
+        </button>
+
+        <ul class="p-gmenu__list">
+          <li><a href="/">About</a></li>
+          <li><a href="/">Works</a></li>
+          <li><a href="/">Skill</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </div>
     </header>
 
-    <main>
+    <main class="l-main">
+      <h1>Based on UR Feeling <br>and A little Spice</h1>
     </main>
 
     <footer>
     </footer>
+    <script src="./js/hamburger.js"></script>
   </body>
 
 </html>

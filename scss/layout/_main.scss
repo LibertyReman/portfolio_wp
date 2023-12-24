@@ -1,0 +1,17 @@
+@use "../foundation/mixin";
+@use "../foundation/variable";
+
+
+.l-main {
+  margin-top: variable.$header-height;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s;
+
+  &.is-open {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+

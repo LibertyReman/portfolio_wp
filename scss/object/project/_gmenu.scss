@@ -1,0 +1,39 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.p-gmenu {
+  @include mixin.dbg-border(green, 3, 1);
+
+  &__list {
+    @include mixin.dbg-border(yellow, 3, 1);
+    position: fixed;
+    top: 0; // fixedの位置指定
+    left: 0; // fixedの位置指定
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+    > li {
+      @include mixin.dbg-border(red, 1, 1);
+
+      > a {
+        @include mixin.dbg-border(blue, 8, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+      }
+    }
+  }
+
+  &.is-open &__list {
+    top: variable.$header-height; // fixedの位置指定
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+

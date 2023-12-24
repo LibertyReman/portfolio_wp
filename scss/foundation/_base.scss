@@ -1,0 +1,28 @@
+@use "./foundation/mixin";
+@use "./variable";
+
+@include mixin.dbg-border-all(blue, 1);
+
+body {
+  @include mixin.dbg-border(pink, 6, 1);
+  min-width: 320px; // スマートフォン 最小サイズ
+  background: variable.$color-kurotsurubami;
+  color: variable.$color-ginnezumi;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+
+  &.is-open {
+    position: fixed; // ハンバーガーメニューが開いている時はスクロールしない
+  }
+}
+
+a {
+  color: inherit; // 親のスタイルを継承
+  text-decoration: none; // URLリンクの下線を消す
+}
+
+li {
+  list-style: none; // 点(・)を削除
+}
+
+
