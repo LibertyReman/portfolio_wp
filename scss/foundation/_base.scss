@@ -11,9 +11,6 @@ body {
   font-family: arial, sans-serif;
   font-weight: bold;
 
-  &.is-open {
-    position: fixed; // ハンバーガーメニューが開いている時はスクロールしない
-  }
 }
 
 a {
