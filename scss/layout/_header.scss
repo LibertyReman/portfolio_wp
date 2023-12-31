@@ -3,16 +3,11 @@
 
 
 .l-header {
-  @include mixin.dbg-border(red, 5, 1);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include mixin.dbg-border(red, 3, 1);
   position: fixed;
   top: 0; // fixedの位置指定
   left: 0; // fixedの位置指定
-  height: variable.$header-height;
   width: 100%;
-
 }
 
 

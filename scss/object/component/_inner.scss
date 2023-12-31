@@ -1,0 +1,10 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.c-inner {
+  @include mixin.dbg-border(yellow, 3, 1);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 25px;
+}

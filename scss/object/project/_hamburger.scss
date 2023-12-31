@@ -7,8 +7,8 @@ $btn-height: 2px;
 
 
 .p-hamburger {
-  @include mixin.dbg-border(green, 3, 1);
-  width: 60px;
+  @include mixin.dbg-border(blue, 3, 1);
+  width: $btn-width;
   height: 50px;
   position: relative;
 
@@ -24,16 +24,16 @@ $btn-height: 2px;
     transition: transform .5s;
   }
   &::before {
-    @include mixin.dbg-border(red, 1, 1);
+    @include mixin.dbg-border(blue, 3, 0);
     top: calc(25% - math.div($btn-height, 2));
   }
   &::after {
-    @include mixin.dbg-border(blue, 1, 1);
+    @include mixin.dbg-border(blue, 3, 0);
     top: calc(75% - math.div($btn-height, 2));
   }
 
   > span { // 真ん中の線
-    @include mixin.dbg-border(yellow, 1, 1);
+    @include mixin.dbg-border(blue, 3, 0);
     position: absolute;
     left: calc(50% - math.div($btn-width, 2));
     top: calc(50% - math.div($btn-height, 2));

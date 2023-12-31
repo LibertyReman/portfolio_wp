@@ -3,10 +3,14 @@
 
 
 .p-gmenu {
-  @include mixin.dbg-border(green, 3, 1);
+  @include mixin.dbg-border(blue, 3, 1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: variable.$header-height;
 
   &__list {
-    @include mixin.dbg-border(yellow, 3, 1);
+    @include mixin.dbg-border(blue, 3, 1);
     position: fixed;
     top: 0; // fixedの位置指定
     left: 0; // fixedの位置指定
@@ -16,10 +20,10 @@
     transition: .5s;
 
     > li {
-      @include mixin.dbg-border(red, 1, 1);
+      @include mixin.dbg-border(blue, 3, 1);
 
       > a {
-        @include mixin.dbg-border(blue, 8, 1);
+        @include mixin.dbg-border(blue, 3, 1);
         display: flex;
         justify-content: center;
         align-items: center;

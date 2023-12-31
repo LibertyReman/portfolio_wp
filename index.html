@@ -10,26 +10,42 @@
   </head>
 
   <body>
-    <header class="l-header"> <!-- flex -->
-      <div class="p-gmenu">
-        <button class="p-hamburger js-hamburger">
-          <span>menuボタン</span>
-        </button>
+    <header class="l-header">
+      <div class="c-inner">
+        <div class="p-gmenu"> <!-- flex -->
+          <button class="p-hamburger js-hamburger">
+            <span>menuボタン</span>
+          </button>
 
-        <ul class="p-gmenu__list">
-          <li><a href="/">About</a></li>
-          <li><a href="/">Works</a></li>
-          <li><a href="/">Skill</a></li>
-          <li><a href="/">Contact</a></li>
-        </ul>
+          <ul class="p-gmenu__list">
+            <li><a href="/">About</a></li>
+            <li><a href="/">Works</a></li>
+            <li><a href="/">Skill</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main class="l-main">
-      <h1>Based on UR Feeling <br>and A little Spice</h1>
+      <div class="c-inner">
+        <h1 class="l-main__title">Based on UR Feelings<br>and A little Spice</h1>
+
+        <section class="p-about c-section"> <!-- flex -->
+          <h2 class="c-section__title">About</h2>
+          <div class="p-about__contents"> <!-- flex -->
+            <img src="./img/icon.jpg" alt="icon" class="p-about__contents__icon">
+            <p class="p-about__contents__text">Simple to do timer ajfiosdja  jodsfa fjdsoia fdjsoi fdjsoafjdisofje jofej oew fjio   .... Simple to do timer ajfiosdja  jodsfa</p>
+          </div>
+        </section>
+
+      </div>
     </main>
 
-    <footer>
+    <footer class="l-footer">
+      <div class="c-inner">
+        <h3>aaa</h3>
+      </div>
     </footer>
     <script src="./js/hamburger.js"></script>
   </body>

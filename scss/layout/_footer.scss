@@ -1,4 +1,6 @@
 @use "../foundation/mixin";
 @use "../foundation/variable";
 
-
+.l-footer {
+  @include mixin.dbg-border(red, 3, 1);
+}

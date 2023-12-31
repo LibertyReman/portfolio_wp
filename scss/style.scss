@@ -22,6 +22,8 @@
 // ---------------------------------------
 // Component
 // ---------------------------------------
+@forward "object/component/inner";
+@forward "object/component/section";
 
 
 // ---------------------------------------
@@ -29,6 +31,7 @@
 // ---------------------------------------
 @forward "object/project/gmenu";
 @forward "object/project/hamburger";
+@forward "object/project/about";
 
 // ---------------------------------------
 // Utility
