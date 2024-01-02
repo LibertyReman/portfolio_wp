@@ -6,6 +6,8 @@
     <meta name="description" content="Liber's Portfolio">
     <title>Liber's Portfolio</title>
     <link href="./css/ress.css" rel="stylesheet">
+    <link href="./css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="./css/swiper.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
 
@@ -39,7 +41,34 @@
           </div>
         </section>
 
-      </div>
+        <section class="p-works c-section"> <!-- flex -->
+          <h2 class="c-section__title">Works</h2>
+          <div class="p-works__contents">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="p-works__contents__thumbnail">
+                    <img src="./img/icon.jpg" alt="icon">
+                  </div>
+                  <p class="p-works__contents__text">Simple to do timer ajfiosdja jodsfa</p>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </section>
+
+      </div> <!-- c-inner -->
     </main>
 
     <footer class="l-footer">
@@ -47,6 +76,8 @@
         <h3>aaa</h3>
       </div>
     </footer>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/swiper-config.js"></script>
     <script src="./js/hamburger.js"></script>
   </body>
 

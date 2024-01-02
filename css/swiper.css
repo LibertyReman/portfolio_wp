@@ -1,0 +1,43 @@
+.swiper {
+  width: 100%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 800px) {
+  .swiper {
+    height: 500px;
+  }
+}
+
+.swiper-slide {
+  background: #256571;
+}
+
+.swiper-button-prev {
+  left: 3px;
+}
+.swiper-button-next {
+  right: 3px;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-top: solid 4px #91989F;
+  border-right: solid 4px #91989F;
+}
+.swiper-button-prev:after {
+  transform: rotate(-135deg);
+}
+.swiper-button-next:after {
+  transform: rotate(45deg);
+}
+
+.swiper-pagination-bullet {
+  background: #91989F;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -26px;
+}
