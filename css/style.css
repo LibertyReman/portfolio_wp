@@ -47,6 +47,15 @@ li {
   padding: 40px 0 100px;
 }
 
+.l-footer {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.l-footer__copyright {
+  padding: 10px;
+  font-size: 12px;
+}
+
 .c-inner {
   width: 100%;
   max-width: 1000px;
