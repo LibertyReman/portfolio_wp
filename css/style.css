@@ -95,6 +95,7 @@ li {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  font-size: 18px;
 }
 .p-gmenu.is-open .p-gmenu__list {
   top: 70px;
