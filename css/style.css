@@ -167,4 +167,32 @@ li {
 .p-works__contents__text {
   padding: 5px;
 }
+
+.p-skill {
+  padding-bottom: 10px;
+}
+.p-skill__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+}
+.p-skill__list__item {
+  display: block;
+  height: 90px;
+  width: 90px;
+  padding: 5px;
+  margin: 0 10px 20px;
+  border-radius: 10%;
+  background: rgba(37, 101, 113, 0.5);
+  text-align: center;
+}
+.p-skill__list__item > img {
+  width: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+.p-skill__list__item > p {
+  font-size: 14px;
+}
 /*# sourceMappingURL=style.css.map */

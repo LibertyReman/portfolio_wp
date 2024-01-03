@@ -1,0 +1,43 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.p-skill {
+  @include mixin.dbg-border(blue, 3, 1);
+  padding-bottom: 10px;
+
+  &__list {
+    @include mixin.dbg-border(blue, 3, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+
+    &__item {
+      @include mixin.dbg-border(blue, 3, 1);
+      display: block;
+      height: 90px;
+      width: 90px;
+      padding: 5px;
+      margin: 0 10px 20px;
+      border-radius: 10%;
+      background: rgba(37, 101, 113, 0.5);
+      text-align: center;
+
+      > img {
+        @include mixin.dbg-border(blue, 3, 1);
+        width: 60px;
+        width: 60px;
+        object-fit: cover;
+      }
+
+      > p {
+        @include mixin.dbg-border(blue, 3, 1);
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+
+
