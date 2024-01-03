@@ -12,6 +12,10 @@ $btn-height: 2px;
   height: 50px;
   position: relative;
 
+  @include mixin.breakpoint("pc") {
+    display: none;
+  }
+
   &::before,
   &::after { // 上下の線
     display: block; // width, height指定できるように変更

@@ -17,10 +17,37 @@
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: .5s;
+    transition: top .5s, opacity .5s;
+
+    @include mixin.breakpoint("pc") {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: variable.$header-height;
+      padding-right: 25px;
+      opacity: 1;
+      visibility: visible;
+      transition: top .5s;
+    }
 
     > li {
       @include mixin.dbg-border(blue, 3, 1);
+      position: relative;
+
+      @include mixin.breakpoint("pc") {
+        &:not(:last-child)::after { // 区切り線 '/'
+          display: block; // width, heightを指定できるように変更
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          content: "";
+          height: 1em;
+          margin: auto;
+          border-left: 2px solid;
+          transform: rotate(20deg);
+        }
+      }
 
       > a {
         @include mixin.dbg-border(blue, 3, 1);
@@ -29,9 +56,13 @@
         align-items: center;
         padding: 10px 0;
         font-size: 18px;
+
+        @include mixin.breakpoint("pc") {
+          padding: 0 10px;
+        }
       }
     }
-  }
+  } // &__list
 
   &.is-open &__list {
     top: variable.$header-height; // fixedの位置指定
