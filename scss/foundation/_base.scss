@@ -3,6 +3,10 @@
 
 @include mixin.dbg-border-all(blue, 1);
 
+html {
+  scroll-behavior: smooth; // ページ内リンクの移動を滑らかに設定
+}
+
 body {
   @include mixin.dbg-border(pink, 6, 0);
   min-width: 320px; // スマートフォン 最小サイズ

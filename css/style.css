@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
   background: #132B37;
@@ -37,7 +41,7 @@ li {
   margin-top: 70px;
   opacity: 1;
   visibility: visible;
-  transition: 0.3s;
+  transition: visibility 0.3s, opacity 0.3s;
 }
 .l-main.is-open {
   opacity: 0;

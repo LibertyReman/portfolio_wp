@@ -19,11 +19,11 @@
             <span>menuボタン</span>
           </button>
 
-          <ul class="p-gmenu__list">
-            <li><a href="/">About</a></li>
-            <li><a href="/">Works</a></li>
-            <li><a href="/">Skill</a></li>
-            <li><a href="/">Contact</a></li>
+          <ul class="p-gmenu__list js-hamburger-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -34,7 +34,7 @@
         <h1 class="l-main__title">Based on UR Feelings<br>and A little Spice</h1>
 
         <section class="p-about c-section"> <!-- flex -->
-          <h2 class="c-section__title">About</h2>
+          <h2 class="c-section__title" id="about">About</h2>
           <div class="p-about__contents"> <!-- flex -->
             <img src="./img/icon.jpg" alt="icon" class="p-about__contents__icon">
             <p class="p-about__contents__text">Simple to do timer ajfiosdja  jodsfa fjdsoia fdjsoi fdjsoafjdisofje jofej oew fjio   .... Simple to do timer ajfiosdja  jodsfa</p>
@@ -42,7 +42,7 @@
         </section>
 
         <section class="p-works c-section"> <!-- flex -->
-          <h2 class="c-section__title">Works</h2>
+          <h2 class="c-section__title" id="works">Works</h2>
           <div class="p-works__contents">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
@@ -69,7 +69,7 @@
         </section>
 
         <section class="p-skill c-section"> <!-- flex -->
-          <h2 class="c-section__title">Skill</h2>
+          <h2 class="c-section__title" id="skill">Skill</h2>
           <ul class="p-skill__list"> <!-- flex -->
             <li class="p-skill__list__item">
               <img src="./img/html5.svg" alt="html5">
@@ -107,7 +107,7 @@
         </section>
 
         <section class="p-contact c-section"> <!-- flex -->
-          <h2 class="c-section__title">Contact</h2>
+          <h2 class="c-section__title" id="contact">Contact</h2>
           <form class="p-contact__form" id="" method="post" action=""> <!-- flex -->
             <label class="p-contact__form__label" for="name">Name</label>
             <input class="p-contact__form__input" type="text" id="name" name="name">
