@@ -17,12 +17,13 @@
   &__title {
     @include mixin.dbg-border(red, 3, 1);
     height: 220px;
-    width: 360px; // ityped 改行制御
+    width: 91.60vw; // ityped 改行制御
+    max-width: 430px; // ityped 改行制御
     padding-top: 40px;
 
     @include mixin.breakpoint("pc") {
       height: 240px;
-      width: 500px; // ityped 改行制御
+      max-width: 500px; // ityped 改行制御
       font-size: 38px;
     }
   }
