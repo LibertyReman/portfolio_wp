@@ -16,7 +16,13 @@
 
   &__title {
     @include mixin.dbg-border(red, 3, 1);
-    padding: 40px 0 100px;
+    min-height: 220px;
+    padding-top: 40px;
+
+    @include mixin.breakpoint("pc") {
+      min-height: 240px;
+      font-size: 38px;
+    }
   }
 }
 

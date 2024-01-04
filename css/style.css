@@ -48,7 +48,14 @@ li {
   visibility: hidden;
 }
 .l-main__title {
-  padding: 40px 0 100px;
+  min-height: 220px;
+  padding-top: 40px;
+}
+@media (min-width: 769px) {
+  .l-main__title {
+    min-height: 240px;
+    font-size: 38px;
+  }
 }
 
 .l-footer {
@@ -99,8 +106,8 @@ li {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: static;
     height: 70px;
-    padding-right: 25px;
     opacity: 1;
     visibility: visible;
     transition: top 0.5s;

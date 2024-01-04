@@ -23,8 +23,8 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      position: static;
       height: variable.$header-height;
-      padding-right: 25px;
       opacity: 1;
       visibility: visible;
       transition: top .5s;
