@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 800px) {
+@media (min-width: 769px) {
   .swiper {
     height: 500px;
   }
@@ -14,11 +14,21 @@
   background: rgba(37, 101, 113, 0.5);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
 .swiper-button-prev {
   left: 3px;
 }
 .swiper-button-next {
   right: 3px;
+}
+@media (min-width: 769px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex;
+  }
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {

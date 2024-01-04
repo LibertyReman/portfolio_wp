@@ -15,7 +15,7 @@
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            800: {
+            769: {
                 slidesPerView: 3,
                 grid: {
                     rows: 2,
