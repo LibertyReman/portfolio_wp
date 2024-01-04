@@ -6,5 +6,9 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 20px;
+
+  @include mixin.breakpoint("pc") {
+    padding: 0 25px;
+  }
 }
