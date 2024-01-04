@@ -1,0 +1,28 @@
+
+.ityped-cursor {
+  padding-left: 5px;
+  font-weight: normal;
+  font-size: 1em;
+  opacity: 1;
+  -webkit-animation: blink 0.8s ease infinite;
+  -moz-animation: blink 0.8s ease infinite;
+  animation: blink 0.8s ease infinite;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
