@@ -1,0 +1,24 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.c-tag {
+  @include mixin.dbg-border(yellow, 3, 1);
+  padding: 1px 3px;
+  margin-left: 5px;
+  border-radius: 5px;
+  color: variable.$color-komachinezu;
+  opacity: .8;
+
+  &--red {
+    background: variable.$color-red;
+  }
+
+  &--blue {
+    background: variable.$color-blue;
+  }
+
+  &--green {
+    background: variable.$color-green;
+  }
+}

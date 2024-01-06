@@ -24,6 +24,7 @@
     @include mixin.breakpoint("pc") {
       height: 240px;
       max-width: 500px; // ityped 改行制御
+      margin-left: 50px;
       font-size: 38px;
     }
   }

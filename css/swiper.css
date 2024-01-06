@@ -1,17 +1,20 @@
 .swiper {
   width: 100%;
-  height: 400px;
+  height: 84.63vw; /* スライド比率指定 */
   margin-left: auto;
   margin-right: auto;
 }
+
 @media (min-width: 769px) {
   .swiper {
-    height: 500px;
+    height: 54.5vw; /* スライド比率指定 */
+    max-height: 545px; /* 1000px以上の時スライドサイズは265px固定 */
   }
 }
 
 .swiper-slide {
   background: rgba(37, 101, 113, 0.5);
+  border-radius: 5px;
 }
 
 .swiper-button-prev,

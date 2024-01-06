@@ -16,24 +16,56 @@
       padding: 0 25px;
     }
 
-    &__thumbnail {
+    &__card {
       @include mixin.dbg-border(blue, 3, 1);
-      height: 140px;
-      width: 100%;
+      height: 100%; // スライド最大サイズ
+      width: 100%; // スライド最大サイズ
 
-      > img {
+      &__thumbnail {
+        @include mixin.dbg-border(blue, 3, 1);
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 0 0;
-      }
-    }
+        aspect-ratio: 16/9; // 画像比率を16:9に固定
 
-    &__text {
-      @include mixin.dbg-border(blue, 3, 1);
-      padding: 5px;
-    }
-  }
+        > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px 5px 0 0;
+          object-fit: cover;
+        }
+      }
+
+      &__title {
+        @include mixin.dbg-border(blue, 3, 1);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; // 最大2行で制限
+        overflow: hidden;
+
+        height: 10.0vw;
+        margin: 1.0vw 5px;
+        font-size: min(3.50vw, 18px);
+
+        @include mixin.breakpoint("pc") {
+          height: 5.5vw;
+          max-height: 55px; // インナー設定
+          margin: 0.6vw 10px;
+          font-size: min(1.6vw, 16px); // インナー設定
+        }
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5px;
+        font-size: max(2.19vw, 10px); // 最小フォントサイズ設定
+
+        @include mixin.breakpoint("pc") {
+          margin: 0 10px;
+          font-size: min(1.4vw, 14px); // インナー設定
+        }
+      }
+    } // &__card
+  } // &__contents
 
 }
 

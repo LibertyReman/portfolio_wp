@@ -20,7 +20,7 @@
                 grid: {
                     rows: 2,
                 },
-                spaceBetween: 20,
+                spaceBetween: 15,
             },
         },
     });
