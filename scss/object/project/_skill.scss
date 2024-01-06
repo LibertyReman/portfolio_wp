@@ -24,19 +24,22 @@
       background: rgba(37, 101, 113, 0.5);
       text-align: center;
 
-      > img {
-        @include mixin.dbg-border(blue, 3, 1);
-        height: 60px;
-        width: 60px;
-        object-fit: cover;
-      }
+      > button {
+        color: inherit;
+        > img {
+          @include mixin.dbg-border(blue, 3, 1);
+          height: 60px;
+          width: 60px;
+          object-fit: cover;
+        }
 
-      > p {
-        @include mixin.dbg-border(blue, 3, 1);
-        font-size: 14px;
-      }
-    }
-  }
+        > p {
+          @include mixin.dbg-border(blue, 3, 1);
+          font-size: 14px;
+        }
+      } // button
+    } // &__item
+  } // &__list
 
 }
 
