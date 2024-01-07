@@ -19,15 +19,12 @@ const sassBuild = (done) => {
 
 const watchFiles = () => {
   watch('./scss/**/*.scss', sassBuild);
-  watch(['./css/*.css', './js/*.js', './*.html'], bsReload);
+  watch(['./css/*.css', './js/*.js', './*.php'], bsReload);
 };
 
 const startBrowserSync = () => {
   browserSync({
-    server: {
-      baseDir: "./",
-      index: "index.html"
-    },
+    proxy: "portfoliowp.local",
     notify: false,      // ブラウザ更新時に表示される通知をオフにする
   });
 }
