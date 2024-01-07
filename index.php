@@ -1,36 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta chaarset="utf-8">
-    <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liber's Portfolio">
-    <title>Liber's Portfolio</title>
-    <link href="./img/hero.jpg" as="image" rel="preload">
-    <link href="./css/ress.css" rel="stylesheet">
-    <link href="./css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="./css/swiper.css" rel="stylesheet">
-    <link href="./css/ityped.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-  </head>
 
-  <body>
-    <header class="l-header">
-      <div class="c-inner">
-        <div class="p-gmenu"> <!-- flex -->
-          <button class="p-hamburger js-hamburger">
-            <span>menuボタン</span>
-          </button>
-
-          <ul class="p-gmenu__list js-hamburger-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#skill">Skill</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
+    <?php get_header(); ?> <!-- header.phpを読み込むテンプレートタグ -->
     <main class="l-main">
       <div class="c-inner">
         <h1 class="l-main__title"><span id="ityped"></span></h1>
@@ -266,20 +235,6 @@
 
       </div> <!-- c-inner -->
     </main>
-
-    <footer class="l-footer">
-      <div class="c-inner">
-        <p class="l-footer__copyright">&copy; Liber's Portfolio. All Rights Reserved.</p>
-      </div>
-    </footer>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/swiper-config.js"></script>
-    <script src="./js/ityped.min.js"></script>
-    <script src="./js/ityped-config.js"></script>
-    <script src="./js/hamburger.js"></script>
-    <script src="./js/modal.js"></script>
-  </body>
-
-</html>
+    <?php get_footer(); ?> <!-- footer.phpを読み込むテンプレートタグ -->
 
 
