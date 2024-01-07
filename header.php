@@ -11,6 +11,7 @@
     <link href="./css/swiper.css" rel="stylesheet">
     <link href="./css/ityped.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <?php wp_head(); ?> <!-- 必ず入れる プラグインや情報出力が機能しなくなってしまう -->
   </head>
 
   <body>
