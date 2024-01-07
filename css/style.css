@@ -271,14 +271,21 @@ li {
   overflow: hidden;
   height: 10vw;
   margin: 1vw 5px;
-  font-size: min(3.5vw, 18px);
+  font-size: min(3.5vw, 20px);
+  line-height: 1.4;
+}
+@media (min-width: 601px) {
+  .p-works__contents__card__title {
+    font-size: 16px;
+    line-height: normal;
+  }
 }
 @media (min-width: 769px) {
   .p-works__contents__card__title {
     height: 5.5vw;
     max-height: 55px;
-    margin: 0.6vw 10px;
-    font-size: min(1.6vw, 16px);
+    margin: min(0.6vw, 7px) 10px;
+    font-size: min(1.8vw, 16px);
   }
 }
 .p-works__contents__card__info {

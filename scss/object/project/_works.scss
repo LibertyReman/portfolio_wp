@@ -43,13 +43,19 @@
 
         height: 10.0vw;
         margin: 1.0vw 5px;
-        font-size: min(3.50vw, 18px);
+        font-size: min(3.50vw, 20px);
+        line-height: 1.4;
+
+        @include mixin.breakpoint("tablet") {
+          font-size: 16px;
+          line-height: normal;
+        }
 
         @include mixin.breakpoint("pc") {
           height: 5.5vw;
           max-height: 55px; // インナー設定
-          margin: 0.6vw 10px;
-          font-size: min(1.6vw, 16px); // インナー設定
+          margin: min(0.6vw, 7px) 10px; // インナー設定
+          font-size: min(1.8vw, 16px); // インナー設定
         }
       }
 
