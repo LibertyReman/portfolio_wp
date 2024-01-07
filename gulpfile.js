@@ -29,7 +29,6 @@ const startBrowserSync = () => {
       index: "index.html"
     },
     notify: false,      // ブラウザ更新時に表示される通知をオフにする
-    open: "external",   // ローカルIPアドレスでサーバを立ち上げる スマホなど他端末での確認用
   });
 }
 

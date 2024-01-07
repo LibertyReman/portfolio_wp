@@ -345,7 +345,7 @@ li {
   background: rgb(37, 101, 113);
   overflow-y: auto;
   transform: translate(-50%, -50%);
-  animation: modalopen 0.6s linear 0s;
+  animation: modalopen 0.3s linear 0s;
   box-shadow: 0px 2px 6px #777;
   border-radius: 10px;
 }
