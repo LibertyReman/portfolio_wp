@@ -57,171 +57,54 @@
         <section class="p-skill c-section"> <!-- flex -->
           <h2 class="c-section__title" id="skill">Skill</h2>
           <ul class="p-skill__list"> <!-- flex -->
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal1">
-                <img src="./img/html5.svg" alt="html5">
-                <p>HTML / CSS</P>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal2">
-                <img src="./img/sass.svg" alt="sass">
-                <p>FLOCSS</p>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal3">
-                <img src="./img/wordpress.svg" alt="wordpress">
-                <p>WordPress</p>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal4">
-                <img src="./img/javascript.svg" alt="javascript">
-                <p>JavaScript</p>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal5">
-                <img src="./img/jquery.svg" alt="jquery">
-                <p>jQuery</p>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal6">
-                <img src="./img/php.svg" alt="php">
-                <p>PHP</P>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal7">
-                <img src="./img/git.svg" alt="git">
-                <p>Git</p>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal8">
-                <img src="./img/linux.svg" alt="linux">
-                <p>Linux</p>
-              </button>
-            </li>
-            <li class="p-skill__list__item">
-              <button class="js-modal-opbtn" data-modal="modal9">
-                <img src="./img/certificate.svg" alt="certificate">
-                <p>Certificate</p>
-              </button>
-            </li>
+            <?php
+              $args = array(
+                'post_type' => 'skill',
+                'posts_per_page' => 100,
+              );
+              $myposts = get_posts($args); // 記事取得
+
+              $i = 0;
+              foreach($myposts as $post):
+                $i++;
+                setup_postdata($post); // グローバル変数$postを書き換え ?>
+                <li class="p-skill__list__item">
+                  <button class="js-modal-opbtn" data-modal="modal<?php echo $i; ?>">
+                    <?php the_post_thumbnail('medium'); ?>
+                    <p><?php the_title(); ?></P>
+                  </button>
+                </li>
+              <?php endforeach;
+              WP_reset_postdata(); // グローバル変数$postをリセット
+            ?>
           </ul>
 
-          <div class="p-modal" id="modal1">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/html5.svg" alt="html5">
-                <h3>HTML / CSS</h3>
-                <p>HTML Living StandardとモダンCSSに対応しています。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal2">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/sass.svg" alt="sass">
-                <h3>FLOCSS</h3>
-                <p>SaasやCSS設計手法のFLOCSSに対応しています。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal3">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/wordpress.svg" alt="wordpress">
-                <h3>WordPress</h3>
-                <p>WordPressのテーマ作成に対応しています。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal4">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/javascript.svg" alt="javascript">
-                <h3>JavaScript</h3>
-                <p>Webサイトに動きをつけることができます。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal5">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/jquery.svg" alt="jquery">
-                <h3>jQuery</h3>
-                <p>Webサイトに動きをつけることができます。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal6">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/php.svg" alt="php">
-                <h3>PHP</h3>
-                <p>PHPを使ったWordPressのカスタマイズを行うことができます。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal7">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/git.svg" alt="git">
-                <h3>Git</h3>
-                <p>バージョン管理ツールGit / SVNや、WebサービスGitHub / Redmineを使うことができます。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal8">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/linux.svg" alt="linux">
-                <h3>Linux</h3>
-                <p>Linuxの通信アプリ開発の経験があります。ソケットプログラミング、シェルスクリプト、コマンドライン操作、Vimなどを使うことができます。</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-modal" id="modal9">
-            <div class="p-modal__window">
-              <div class="p-modal__window__clbtn">
-                <span>×</span>
-              </div>
-              <div class="p-modal__window__contents">
-                <img src="./img/certificate.svg" alt="certificate">
-                <h3>Certificate</h3>
-                <p>国家資格 応用情報技術者 (2023.10)</p>
-              </div>
-            </div>
-          </div>
+          <?php
+            $args = array(
+              'post_type' => 'skill',
+              'posts_per_page' => 100,
+            );
+            $myposts = get_posts($args); // 記事取得
 
+            $i = 0;
+            foreach($myposts as $post):
+              $i++;
+              setup_postdata($post); // グローバル変数$postを書き換え ?>
+              <div class="p-modal" id="modal<?php echo $i; ?>">
+                <div class="p-modal__window">
+                  <div class="p-modal__window__clbtn">
+                    <span>×</span>
+                  </div>
+                  <div class="p-modal__window__contents">
+                    <?php the_post_thumbnail('medium'); ?>
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php the_content(); ?></p>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach;
+            WP_reset_postdata(); // グローバル変数$postをリセット
+          ?>
         </section>
 
         <section class="p-contact c-section"> <!-- flex -->
