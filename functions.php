@@ -1,4 +1,19 @@
 <?php
+  // テーマサポート
+  add_theme_support('title-tag');   // タイトルタグのサポートを許可
+
+
+  // タイトルタグの出力制御
+  function portfolio_title_tag($title) {
+    if (is_front_page() && is_home()) { //トップページなら
+      $title = get_bloginfo('name', 'display');
+    } elseif (is_singular()) { //シングルページなら
+      $title = single_post_title('', false);
+    }
+      return $title;
+  }
+  add_filter('pre_get_document_title', 'portfolio_title_tag');
+
 
   // CSS, JSの読み込み
   function portfolio_script() {
