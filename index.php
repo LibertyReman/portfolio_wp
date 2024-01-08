@@ -7,8 +7,11 @@
         <section class="p-about c-section"> <!-- flex -->
           <h2 class="c-section__title" id="about">About</h2>
           <div class="p-about__contents"> <!-- flex -->
-            <img src="./img/icon.jpg" alt="icon" class="p-about__contents__icon">
-            <p class="p-about__contents__text">Simple to do timer ajfiosdja  jodsfa fjdsoia fdjsoi fdjsoafjdisofje jofej oew fjio   .... Simple to do timer ajfiosdja  jodsfa</p>
+            <?php
+              $page = get_page_by_path('about');
+              echo '<img src="' .get_the_post_thumbnail_url($page, 'full') .'" alt="icon" class="p-about__contents__icon">';
+              echo '<div class="p-about__contents__test">' .$page->post_content .'</div>';
+            ?>
           </div>
         </section>
 

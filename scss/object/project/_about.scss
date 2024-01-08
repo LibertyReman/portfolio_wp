@@ -8,8 +8,14 @@
   &__contents {
     @include mixin.dbg-border(blue, 3, 1);
     display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 800px;
     margin: 0 5.33vw 30px;
+
+    @include mixin.breakpoint("pc") {
+      flex-direction: row;
+    }
 
     &__icon {
       @include mixin.dbg-border(blue, 3, 1);
@@ -17,7 +23,12 @@
       height: 130px;
       width: 130px;
       margin-right: 20px;
+      margin-bottom: 20px;
       border-radius: 50%;
+
+      @include mixin.breakpoint("pc") {
+        margin-bottom: 0;
+      }
     }
     &__text {
       @include mixin.dbg-border(blue, 3, 1);

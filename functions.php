@@ -1,6 +1,8 @@
 <?php
   // テーマサポート
   add_theme_support('title-tag');   // タイトルタグのサポートを許可
+  add_theme_support('post-thumbnails'); // アイキャッチのサポートを追加
+  add_theme_support('automatic-feed-links'); // フィードの有効化
 
 
   // タイトルタグの出力制御
