@@ -6,11 +6,6 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <title>Liber's Portfolio</title>
     <link href="./img/hero.jpg" as="image" rel="preload">
-    <link href="./css/ress.css" rel="stylesheet">
-    <link href="./css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="./css/swiper.css" rel="stylesheet">
-    <link href="./css/ityped.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
     <?php wp_head(); ?> <!-- 必ず入れる プラグインや情報出力が機能しなくなってしまう -->
   </head>
 
