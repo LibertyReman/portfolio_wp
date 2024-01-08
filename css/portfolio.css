@@ -117,6 +117,10 @@ li {
   background: #28A745;
 }
 
+.c-link {
+  cursor: pointer;
+}
+
 .p-gmenu {
   display: flex;
   justify-content: flex-end;

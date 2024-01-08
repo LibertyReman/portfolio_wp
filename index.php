@@ -20,29 +20,33 @@
           <div class="p-works__contents">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="p-works__contents__card">
-                    <a href="/">
-                      <div class="p-works__contents__card__thumbnail">
-                        <img src="./img/works-sample.jpg" alt="works-sample">
+                <?php
+                  $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 100,
+                  );
+                  $myposts = get_posts($args); // 記事取得
+
+                  foreach($myposts as $post):
+                    setup_postdata($post); // グローバル変数$postを書き換え ?>
+                    <div class="swiper-slide">
+                      <div class="p-works__contents__card">
+                        <a class="c-link" href="<?php the_permalink(); ?>">
+                          <div class="p-works__contents__card__thumbnail">
+                            <?php the_post_thumbnail('medium'); ?>
+                          </div>
+                          <p class="p-works__contents__card__title"><?php the_title(); ?></p>
+                          <div class="p-works__contents__card__info">
+                            <p><?php the_time('Y/m/d'); ?></p>
+                            <div><span class="c-tag c-tag--red"><?php $cat = get_the_category(); $cat = $cat[0]; {echo $cat->cat_name;} ?></span></div>
+                          </div>
+                        </a>
                       </div>
-                      <p class="p-works__contents__card__title">WordPressを使ったハンバーガーサイトの作成（架空サイト）</p>
-                      <div class="p-works__contents__card__info">
-                        <p>2024.1.5</p>
-                        <div><span class="c-tag c-tag--red">WordPress</span></div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-              </div>
+                    </div> <!-- .swiper-slide -->
+                  <?php endforeach;
+                  WP_reset_postdata(); // グローバル変数$postをリセット
+                ?>
+              </div> <!-- .swiper-wrapper -->
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>

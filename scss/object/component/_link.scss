@@ -1,0 +1,8 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.c-link {
+  @include mixin.dbg-border(yellow, 3, 1);
+  cursor: pointer;
+}
