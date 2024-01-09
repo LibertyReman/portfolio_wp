@@ -17,6 +17,7 @@
                   <?php the_post_thumbnail(); ?>
                 </div>
                 <?php the_content(); ?> <!-- 本文の出力 -->
+                <?php wp_link_pages(); ?> <!--  ページ送りの出力 -->
               </section>
             </div> <!-- post_class() -->
           <?php endwhile;
