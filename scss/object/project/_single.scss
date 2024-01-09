@@ -1,0 +1,54 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.p-single {
+  @include mixin.dbg-border(blue, 3, 1);
+  align-items: start;
+  padding: 0 10px 15px;
+  background: rgba(23, 33, 35, 0.9);
+  line-height: 1.5em;
+
+  @include mixin.breakpoint("pc") {
+    padding: 0 15px 20px;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    margin: 10px 0;
+    aspect-ratio: 16/9; // 画像比率を16:9に固定
+
+    @include mixin.breakpoint("pc") {
+      max-width: 650px;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px 5px 0 0;
+      object-fit: cover;
+    }
+  }
+
+  > {
+    h1 {
+      padding: 0.4em 0.5em;
+      margin: 20px 0 10px;
+      background: rgba(37, 101, 113, 0.2);
+      border-left: solid 5px rgba(37, 101, 113, 0.5);;
+    }
+
+    h2 {
+      padding: 0.3em;
+      margin: 15px 0 5px;
+      background: rgba(37, 101, 113, 0.2);
+      border-bottom: solid 3px rgba(37, 101, 113, 0.5);
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+

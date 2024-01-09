@@ -61,6 +61,11 @@ li {
     font-size: 38px;
   }
 }
+.l-main__title--single {
+  height: auto;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
 
 .l-footer {
   margin-bottom: 10px;
@@ -324,6 +329,49 @@ li {
     margin: 0 10px;
     font-size: min(1.4vw, 14px);
   }
+}
+
+.p-single {
+  align-items: start;
+  padding: 0 10px 15px;
+  background: rgba(23, 33, 35, 0.9);
+  line-height: 1.5em;
+}
+@media (min-width: 769px) {
+  .p-single {
+    padding: 0 15px 20px;
+  }
+}
+.p-single__thumbnail {
+  width: 100%;
+  margin: 10px 0;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 769px) {
+  .p-single__thumbnail {
+    max-width: 650px;
+  }
+}
+.p-single__thumbnail > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+}
+.p-single > h1 {
+  padding: 0.4em 0.5em;
+  margin: 20px 0 10px;
+  background: rgba(37, 101, 113, 0.2);
+  border-left: solid 5px rgba(37, 101, 113, 0.5);
+}
+.p-single > h2 {
+  padding: 0.3em;
+  margin: 15px 0 5px;
+  background: rgba(37, 101, 113, 0.2);
+  border-bottom: solid 3px rgba(37, 101, 113, 0.5);
+}
+.p-single > p {
+  margin: 10px 0;
 }
 
 .p-skill {
