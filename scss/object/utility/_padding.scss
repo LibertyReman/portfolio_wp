@@ -1,0 +1,17 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+@use "sass:math";
+
+$step: 5;
+$end: 100px;
+
+@for $i from 0 through math.div($end, $step) {
+  .u-pt-#{$i * $step}px {
+    margin-top: #{$step * $i};
+  }
+  .u-pb-#{$i * $step}px {
+    padding-bottom: #{$step * $i}px;
+  }
+}
+
+

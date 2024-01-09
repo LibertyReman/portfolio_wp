@@ -7,21 +7,21 @@
 
   &__form {
     @include mixin.dbg-border(blue, 3, 1);
-    display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: 600px;
     padding: 0 15px;
 
     &__label {
       @include mixin.dbg-border(blue, 3, 1);
+      display: inline-block;
       padding-bottom: 5px;
+      margin-top: 25px;
     }
 
     &__input {
       @include mixin.dbg-border(blue, 3, 1);
       height: 30px;
-      margin-bottom: 25px;
+      width: 100%;
       border-radius: 5px;
       background: rgba(50, 53, 54, 0.9);
       color: lightgray;
@@ -30,7 +30,7 @@
     &__message {
       @include mixin.dbg-border(blue, 3, 1);
       height: 180px;
-      margin-bottom: 25px;
+      width: 100%;
       border-radius: 5px;
       background: rgba(50, 53, 54, 0.9);
       color: lightgray;
@@ -38,9 +38,10 @@
 
     &__submit {
       @include mixin.dbg-border(blue, 3, 1);
+      display: block;
       height: 40px;
       width: 110px;
-      margin: 0 auto 25px;
+      margin: 15px auto 25px;
       border-radius: 10px;
       background: rgba(37, 101, 113, 0.8);
       color: inherit;
