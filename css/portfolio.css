@@ -120,6 +120,14 @@ li {
 .c-link {
   cursor: pointer;
 }
+.c-link--button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background: lightgray;
+  color: black;
+}
 
 .p-gmenu {
   display: flex;
@@ -454,5 +462,17 @@ li {
   border-radius: 10px;
   background: rgba(37, 101, 113, 0.8);
   color: inherit;
+}
+
+.p-error {
+  height: 100vh;
+  padding-top: 150px;
+  text-align: center;
+}
+.p-error__title {
+  font-size: 100px;
+}
+.p-error__text {
+  font-size: 22px;
 }
 /*# sourceMappingURL=portfolio.css.map */
