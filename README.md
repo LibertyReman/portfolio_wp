@@ -7,7 +7,7 @@
 
 ---
 ## 開発
-    $ git clone https://github.com/LibertyReman/hamburger_wp.git
+    $ git clone https://github.com/LibertyReman/portfolio_wp.git
     $ npm link gulp browser-sync gulp-plumber gulp-dart-sass gulp-sourcemaps
     $ gulp
 
