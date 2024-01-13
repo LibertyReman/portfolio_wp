@@ -35,6 +35,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 300;
 }
 
 .l-main {
@@ -438,8 +439,13 @@ li {
   border-radius: 10%;
   background: rgba(37, 101, 113, 0.5);
   text-align: center;
+  transition: background 0.2s;
+}
+.p-skill__list__item:hover {
+  background: rgba(37, 101, 113, 0.9);
 }
 .p-skill__list__item > button {
+  width: 100%;
   color: inherit;
 }
 .p-skill__list__item > button > img {

@@ -14,7 +14,7 @@
             <?php
               $page = get_page_by_path('about');
               echo '<img src="' .get_the_post_thumbnail_url($page, 'full') .'" alt="icon" class="p-about__contents__icon">';
-              echo '<div class="p-about__contents__test">' .$page->post_content .'</div>';
+              echo '<div class="p-about__contents__text">' .$page->post_content .'</div>';
             ?>
           </div>
         </section>

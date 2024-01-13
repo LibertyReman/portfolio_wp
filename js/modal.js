@@ -14,7 +14,7 @@ closeBtns.forEach(function (btn) {
     };
 });
 
-window.onclick = function (event) {
+document.body.onclick = function (event) {
     if (event.target.className === "p-modal") {
         event.target.style.display = "none";
     }
