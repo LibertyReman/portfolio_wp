@@ -18,6 +18,19 @@
                 </div>
                 <?php the_content(); ?> <!-- 本文の出力 -->
                 <?php wp_link_pages(); ?> <!--  ページ送りの出力 -->
+
+                <?php if(get_previous_post() || get_next_post()): ?>
+                  <ul class="p-pagenation">
+                    <?php if(get_previous_post()): ?>
+                      <li class="p-pagenation__prev"><?php previous_post_link('%link', '< Prev'); ?></li>
+                      <li class="p-pagenation__prev p-pagenation__prev--pc"><?php previous_post_link('%link', '< %title'); ?></li>
+                    <?php endif; ?>
+                    <?php if(get_next_post()): ?>
+                      <li class="p-pagenation__next"><?php next_post_link('%link', 'Next >'); ?></li>
+                      <li class="p-pagenation__next p-pagenation__next--pc"><?php next_post_link('%link', '%title >'); ?></li>
+                    <?php endif; ?>
+                  </ul>
+                <?php endif; ?>
               </section>
             </div> <!-- post_class() -->
           <?php endwhile;

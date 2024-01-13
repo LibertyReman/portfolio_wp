@@ -1,0 +1,54 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+
+.p-pagenation {
+  @include mixin.dbg-border(blue, 3, 1);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+
+  a {
+    text-decoration: underline;
+  }
+
+  &__prev {
+    display: list-item;
+    margin-left: 0;
+    margin-right: auto;
+
+    @include mixin.breakpoint("pc") {
+      display: none;
+    }
+
+    &--pc {
+      display: none;
+
+      @include mixin.breakpoint("pc") {
+        display: list-item;
+      }
+    }
+  }
+
+  &__next {
+    display: list-item;
+    margin-left: auto;
+    margin-right: 0;
+
+    @include mixin.breakpoint("pc") {
+      display: none;
+    }
+
+    &--pc {
+      display: none;
+
+      @include mixin.breakpoint("pc") {
+        display: list-item;
+      }
+    }
+  }
+
+}
+
+

@@ -2,7 +2,11 @@
     <?php get_header(); ?> <!-- header.phpを読み込むテンプレートタグ -->
     <main class="l-main">
       <div class="c-inner">
-        <h1 class="l-main__title"><span id="ityped"></span></h1>
+        <h1 class="l-main__title">
+          <a class="c-link" href="<?php echo esc_url(home_url('/')); ?>">
+            <span id="ityped"></span>
+          </a>
+        </h1>
 
         <section class="p-about c-section"> <!-- flex -->
           <h2 class="c-section__title" id="about">About</h2>
