@@ -7,7 +7,6 @@
   align-items: start;
   padding: 0 10px 15px;
   background: rgba(23, 33, 35, 0.9);
-  line-height: 1.5em;
 
   @include mixin.breakpoint("pc") {
     padding: 0 15px 20px;
@@ -30,24 +29,32 @@
     }
   }
 
-  > {
-    h1 {
-      padding: 0.4em 0.5em;
-      margin: 20px 0 10px;
-      background: rgba(37, 101, 113, 0.2);
-      border-left: solid 5px rgba(37, 101, 113, 0.5);;
-    }
+  ul {
+    padding-left: 20px;
+  }
 
-    h2 {
-      padding: 0.3em;
-      margin: 15px 0 5px;
-      background: rgba(37, 101, 113, 0.2);
-      border-bottom: solid 3px rgba(37, 101, 113, 0.5);
-    }
+  li {
+    padding-bottom: 10px;
+    list-style: disc;
+  }
 
-    p {
-      margin: 10px 0;
-    }
+  h1 {
+    padding: 0.4em 0.5em;
+    margin: 20px 0 10px;
+    background: rgba(37, 101, 113, 0.2);
+    border-left: solid 5px rgba(37, 101, 113, 0.5);;
+  }
+
+  h2 {
+    padding: 0.3em;
+    margin: 15px 0 5px;
+    background: rgba(37, 101, 113, 0.2);
+    border-bottom: solid 3px rgba(37, 101, 113, 0.5);
+  }
+
+  p {
+    margin: 10px 0;
+    line-height: 1.5em;
   }
 }
 

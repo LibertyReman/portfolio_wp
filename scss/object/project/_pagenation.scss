@@ -6,12 +6,17 @@
   @include mixin.dbg-border(blue, 3, 1);
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 50px 20px 20px;
   width: 100%;
 
   a {
     text-decoration: underline;
   }
+
+  li {
+    list-style: none;
+  }
+
 
   &__prev {
     display: list-item;
