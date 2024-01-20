@@ -370,12 +370,14 @@ li {
   margin: 20px 0 10px;
   background: rgba(37, 101, 113, 0.2);
   border-left: solid 5px rgba(37, 101, 113, 0.5);
+  font-size: 24px;
 }
 .p-single h2 {
   padding: 0.3em;
   margin: 15px 0 5px;
   background: rgba(37, 101, 113, 0.2);
   border-bottom: solid 3px rgba(37, 101, 113, 0.5);
+  font-size: 20px;
 }
 .p-single p {
   margin: 10px 0;
@@ -389,6 +391,7 @@ li {
   width: 100%;
 }
 .p-pagenation a {
+  color: #0693E3;
   text-decoration: underline;
 }
 .p-pagenation li {
