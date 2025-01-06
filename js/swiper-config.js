@@ -1,6 +1,9 @@
 ( function () {
     var swiper = new Swiper(".mySwiper", {
-        autoplay: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: true
+        },
         slidesPerView: 2,
         grid: {
             rows: 2,
