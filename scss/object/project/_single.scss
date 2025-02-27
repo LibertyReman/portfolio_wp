@@ -6,7 +6,6 @@
   @include mixin.dbg-border(blue, 3, 1);
   align-items: start;
   padding: 0 10px 15px;
-  background: rgba(23, 33, 35, 0.9);
 
   @include mixin.breakpoint("pc") {
     padding: 0 15px 20px;
